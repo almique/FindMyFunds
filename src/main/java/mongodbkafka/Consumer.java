@@ -31,10 +31,10 @@ public class Consumer {
 
         // infinite poll loop
         PrintStream stream = new PrintStream(System.out);
-        while (true) {
-            final KafkaConsumer<String, Object> records = consumer;
-            stream.print(records);
-        }
+        final KafkaConsumer<String, Object> records = consumer;
+        stream.print(records);
+        System.out.println("\n");
+        System.out.println(records.toString());
     }
     
 }
